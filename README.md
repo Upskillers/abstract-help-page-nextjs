@@ -1,2 +1,1 @@
-# abstract-home-nextjs
-https://www.frontendpractice.com/projects/abstract in NextJS
+This is a starter template for [Learn Next.js](https://nextjs.org/learn).
