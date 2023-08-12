@@ -2,6 +2,7 @@ import Head from 'next/head';
 import styles from '../styles/Home.module.css';
 import Link from 'next/link';
 import { getSortedArticlesData } from '../lib/articles';
+import 'tailwindcss/tailwind.css';
 
 export default function Home({allArticlesData}) {
   return (
@@ -11,7 +12,7 @@ export default function Home({allArticlesData}) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main class = "bg-black">
+      <main className = "bg-black">
         <h1 className={styles.title}>
           Welcome to <a href="https://nextjs.org">Next.js!</a>
         </h1>
