@@ -2,7 +2,6 @@ import Head from 'next/head';
 import styles from '../styles/Home.module.css';
 import Link from 'next/link';
 import { getSortedArticlesData } from '../lib/articles';
-import 'tailwindcss/tailwind.css';
 
 export default function Home({allArticlesData}) {
   return (
