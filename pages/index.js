@@ -1,15 +1,17 @@
 import Head from 'next/head';
 import styles from '../styles/Home.module.css';
+import Link from 'next/link';
+import { getSortedArticlesData } from '../lib/articles';
 
-export default function Home() {
+export default function Home({allArticlesData}) {
   return (
     <div className={styles.container}>
       <Head>
-        <title>Create Next App</title>
+        <title>Create Next App3</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main>
+      <main className = "bg-black">
         <h1 className={styles.title}>
           Welcome to <a href="https://nextjs.org">Next.js!</a>
         </h1>
@@ -47,6 +49,17 @@ export default function Home() {
             </p>
           </a>
         </div>
+        <ul>
+          {allArticlesData.map(({ id, date, title }) => (
+            <li key={id}>
+              <Link href={`/articles/${id}`}>{title}</Link>
+              <br />
+              <small>
+                <Date dateString={date} />
+              </small>
+            </li>
+          ))}
+        </ul>
       </main>
 
       <footer>
@@ -112,4 +125,12 @@ export default function Home() {
       `}</style>
     </div>
   )
+}
+export async function getStaticProps() {
+  const allArticlesData = getSortedArticlesData()
+  return {
+    props: {
+      allArticlesData
+    }
+  }
 }
