@@ -1,4 +1,4 @@
-name: Vercel Preview Deployment
+name: Vercel Staging Deployment
 env:
   VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
   VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
@@ -10,7 +10,7 @@ jobs:
   Deploy-Preview:
     runs-on: ubuntu-latest
     environment:
-      name: preview
+      name: staging
       url: ${{ steps.deploy.outputs.url }}
     steps:
       - uses: actions/checkout@v2
