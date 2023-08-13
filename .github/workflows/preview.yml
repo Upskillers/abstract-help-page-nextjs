@@ -23,3 +23,5 @@ jobs:
       - name: Deploy Project Artifacts to Vercel
         id: deploy
         run: echo "::set-output name=url::$(vercel deploy --prebuilt --token=${{ secrets.VERCEL_TOKEN }})"
+      - name: Display car
+        run: echo "deploy.outputs"
