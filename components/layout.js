@@ -37,7 +37,7 @@ export default function Layout({children}){
                     <div className="inline-block w-0.5 self-stretch my-0.5 mx-2 bg-[#C1121F]"></div>
                     <a className="text-white m-auto ml-0" title="Home" href="/hc/en-us">Help Center</a>
                 </div>
-                <div className="m-auto mr-4 hidden md:block">
+                <div className="m-auto mr-1 hidden md:block">
                     <button type="button" className="text-white bg-gray-800 hover:bg-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 border border-white ">Submit a request</button>
                     <button type="button" className="text-white bg-[#669BBC] hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 ml-2 focus:outline-none border border-[#669BBC]">Sign in</button>
                 </div>
