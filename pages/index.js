@@ -5,18 +5,22 @@ import { getSortedArticlesData } from '../lib/articles';
 
 export default function Home({allArticlesData}) {
   return (
-    <div className={styles.container}>
+    <div className="min-h-[100vh] px-0 py-[0.5rem] flex-col justify-center items-center">
       <Head>
         <title>Create Next App3</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className = "bg-black">
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
+      <main className = "py-[5rem] flex grow flex-col flex-wrap items-center justify-center">
+        <h1 className="mb-[1.5rem] leading-[1.15rem] text-[3.6rem] text-center">
+          Welcome to&nbsp;
+          <a
+            href="https://nextjs.org"
+            className="text-[#0070f3] hover:underline focus:underline active:underline"
+          >Next.js!</a>
         </h1>
 
-        <p className={styles.description}>
+        <p className="align-center leading-6 text-base mt-2">
           Get started by editing <code>pages/index.js</code>
         </p>
 
@@ -74,14 +78,6 @@ export default function Home({allArticlesData}) {
       </footer>
 
       <style jsx>{`
-        main {
-          padding: 5rem 0;
-          flex: 1;
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          align-items: center;
-        }
         footer {
           width: 100%;
           height: 100px;
