@@ -24,4 +24,4 @@ jobs:
         id: deploy
         run: echo "name=url::$(vercel deploy --prebuilt --token=${{ secrets.VERCEL_TOKEN }})" >> $GITHUB_OUTPUT
       - name: Display car
-        run: echo "deploy.outputs"
+        run: echo "${{steps.deploy.outputs}}"
