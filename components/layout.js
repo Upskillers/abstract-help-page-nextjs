@@ -60,8 +60,8 @@ export default function Layout({children}){
                     </li>
                 </ul>}
             <main>{children}</main>
-            <div className = "w-full bg-[#003049] flex flex-rows justify-start justify-items-start">
-                <div class="w-full grid grid-cols-2 gap-8 md:grid-cols-4 pl-3 py-4 md:p-12 md:ml-32">
+            <div className = "w-full bg-[#003049] flex flex-col md:flex-row justify-start justify-items-start">
+                <div class="w-full grid grid-cols-1 gap-8 md:grid-cols-4 pl-3 py-4 md:p-12 md:ml-32">
                     <div>
                         <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Abstract</h2>
                         <ul class="text-gray-500 dark:text-gray-400 font-medium">
@@ -79,13 +79,13 @@ export default function Layout({children}){
                             <li class="mb-4">
                                 <a href="#" class="hover:underline ">Blog</a>
                             </li>
-                            <li>
+                            <li class="mb-4">
                                 <a href="#" class="hover:underline ">Help Centre</a>
                             </li>
-                            <li>
+                            <li class="mb-4">
                                 <a href="#" class="hover:underline ">Release Notes</a>
                             </li>
-                            <li>
+                            <li class="mb-4">
                                 <a href="#" class="hover:underline ">Status</a>
                             </li>
                         </ul>
