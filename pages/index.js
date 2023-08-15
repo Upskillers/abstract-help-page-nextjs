@@ -3,14 +3,13 @@ import styles from '../styles/Home.module.css';
 import Link from 'next/link';
 import { getSortedArticlesData } from '../lib/articles';
 import Card from '../components/card';
+import Layout from '../components/layout';
 
 export default function Home({allArticlesData}) {
   return (
+    <Layout>
+
     <div className="min-h-[100vh] px-0 py-[0.5rem] flex-col justify-center items-center">
-      <Head>
-        <title>Create Next App3</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
       
       <main className = "py-[5rem] flex grow flex-col flex-wrap items-center justify-center">
         <h1 className="mb-[1.5rem] leading-[1.15rem] text-[3.6rem] text-center">
@@ -117,6 +116,7 @@ export default function Home({allArticlesData}) {
         }
       `}</style>
     </div>
+    </Layout>
   )
 }
 export async function getStaticProps() {
