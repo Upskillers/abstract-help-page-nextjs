@@ -5,8 +5,7 @@ export const siteTitle = 'Upskill: Abstract Help Center'
 
 export default function Layout({ children, home }) {
   return (
-    <div className='bg-[#669BBC]
-        min-h-[100vh] px-0 py-[0.5rem] flex flex-col justify-center items-center'>
+    <div className='min-h-[100vh] px-0 py-[0.5rem] flex flex-col justify-center items-center'>
       <Head>
         <title>{siteTitle}</title>
         <link rel="icon" href="/favicon.ico" />
