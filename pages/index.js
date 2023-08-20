@@ -10,7 +10,7 @@ export default function Home({ allArticlesData }) {
         Welcome to&nbsp;
         <a
           href="https://nextjs.org"
-          className="text-[#0070f3] hover:underline focus:underline active:underline"
+          className="text-accent hover:underline focus:underline active:underline"
         >Next.js!</a>
       </h1>
 
@@ -46,7 +46,10 @@ export default function Home({ allArticlesData }) {
       <ul>
         {allArticlesData.map(({ id, date, title }) => (
           <li key={id}>
-            <Link href={`/articles/${id}`}>{title}</Link>
+            <Link 
+              href={`/articles/${id}`}
+              className="text-accent hover:underline focus:underline active:underline"
+              >{title}</Link>
             <br />
             <small>
               <Date dateString={date} />
