@@ -2,6 +2,7 @@ import Head from 'next/head'
 import Link from 'next/link'
 import Navbar from './navbar'
 import Footer from './footer'
+import Script from 'next/script'
 
 export const siteTitle = 'Upskill: Abstract Help Center'
 
@@ -14,10 +15,10 @@ export default function Layout({ children, home }) {
         <meta name="og:title" content={siteTitle} />
       </Head>
         <Navbar/>
-      <main className='py-[5rem] flex grow flex-col flex-wrap items-center justify-center'>
-        {children}
-      </main>
-      {!home && (
+        <main className='py-[5rem] flex grow flex-col flex-wrap items-center justify-center dark:bg-black'>
+            {children}
+        </main>
+        {!home && (
         <div>
           <Link href='/'>Back to home</Link>
         </div>

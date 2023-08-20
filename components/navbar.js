@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 export default function Navbar() {
     const [visible, setVisible] = useState(false);
@@ -6,10 +6,43 @@ export default function Navbar() {
     const handleToggle = () => {
         setVisible((current) => !current);
     };
+ 
+    const [theme, setTheme] = useState(true);
+    // for dark mode
+    useEffect(() => {
+        const theme = JSON.parse(localStorage.getItem('theme'));
+        // if not theme and user OS is dark mode
+        if ((!theme && 
+        window.matchMedia('(prefers-color-scheme: dark)').matches) ||           theme === 'dark') {
+        setTheme('dark');
+        document.documentElement.classList.add('dark');
+        } else {
+        setTheme('light');
+        document.documentElement.classList.remove('dark');
+        }
+    }, [theme]);
+
+    function handleDarkToggle() {
+        if (theme === "light") {
+            // when theme is changed, set the localStorage
+            localStorage.setItem("theme", JSON.stringify("dark"));
+            setTheme("dark");
+            document.documentElement.classList.add("dark");
+          } else {
+            // when theme is changed, set the localStorage
+            localStorage.setItem("theme", JSON.stringify("light"));
+            console.log("set light")
+
+            setTheme("light");
+            document.documentElement.classList.remove("dark");
+          }
+    };
+
+    
     return (
         <div className="w-full">
-        <div className="w-full bg-[#003049] m-0 flex flex-row justify-between">
-
+        <div className="{{ dark ? 'dark' : '' }} w-full bg-[#003049] m-0 flex flex-row justify-between">
+        <button onClick={handleDarkToggle}>Dark</button>
             <div id="logo-wrapper" className="pr-2 m-1 md:ml-4 w-auto h-16 flex p-4">
                 <svg className="abstract-logo logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 51" preserveAspectRatio="xMinYMid slice">
                     <g className="abstract-logo-mark" fill="#fff">
