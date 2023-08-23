@@ -14,16 +14,16 @@ export default function Layout({ children, home }) {
         <link rel="icon" href="/favicon.ico" />
         <meta name="og:title" content={siteTitle} />
       </Head>
-        <Navbar/>
-        <main className='py-[5rem] flex grow flex-col flex-wrap items-center justify-center dark:bg-black'>
-            {children}
-        </main>
-        {!home && (
+      <Navbar />
+      <main className='py-[5rem] flex grow flex-col flex-wrap items-center justify-center dark:bg-black'>
+        {children}
+      </main>
+      {!home && (
         <div>
           <Link href='/'>Back to home</Link>
         </div>
       )}
-      <Footer/>
+      <Footer />
 
     </div>
   )

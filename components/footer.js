@@ -1,8 +1,8 @@
 
 
-export default function Footer() {
+export default function Footer(){
   return (
-    <div className="w-full bg-[#003049] flex flex-col md:flex-row justify-start justify-items-start">
+    <div className="w-full bg-primary flex flex-col md:flex-row justify-start justify-items-start">
       <div className="w-full grid grid-cols-1 gap-8 md:grid-cols-4 pl-3 py-4 md:p-12 md:ml-32">
         <div>
           <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Abstract</h2>

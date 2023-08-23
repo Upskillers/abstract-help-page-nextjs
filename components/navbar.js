@@ -45,7 +45,7 @@ export default function Navbar() {
 
   return (
     <div className="w-full">
-      <div className="w-full bg-[#003049] m-0 flex flex-row justify-between">
+      <div className="w-full bg-primary m-0 flex flex-row justify-between">
         <div id="logo-wrapper" className="pr-2 m-1 md:ml-4 w-auto h-16 flex p-4">
           <svg className="abstract-logo logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 51" preserveAspectRatio="xMinYMid slice">
             <g className="abstract-logo-mark" fill="#fff">
@@ -63,7 +63,7 @@ export default function Navbar() {
               <path className="abstract-logo-letter-8" d="M196.23 23.52h3.67V20h-3.67v-6.2h-4.44l-.08 6.2h-3v3.57h3v10.4a5.92 5.92 0 0 0 1.07 4c.77.92 2 1.38 3.9 1.38a13.24 13.24 0 0 0 3.32-.43v-3.59a5.51 5.51 0 0 1-1.83.35c-1.38 0-1.94-.69-1.94-2.64z"></path>
             </g>
           </svg>
-          <div className="inline-block w-0.5 self-stretch my-0.5 mx-2 bg-[#C1121F]"></div>
+          <div className="inline-block w-0.5 self-stretch my-0.5 mx-2 bg-accent"></div>
           <a className="text-white m-auto ml-0" title="Home" href="#">Help Center</a>
         </div>
         <button onClick={handleDarkToggle} className="m-auto mr-4 align-middle">
@@ -76,10 +76,10 @@ export default function Navbar() {
                                                  focus:outline-none focus:ring-4 focus:ring-gray-300
                                                  font-medium rounded-lg text-sm px-5 py-2.5 border
                                                  border-white ">Submit a request</button>
-          <button type="button" className="text-white bg-[#669BBC] hover:bg-blue-800
+          <button type="button" className="text-white bg-secondary hover:bg-blue-800
                                                  focus:ring-4 focus:ring-blue-300 font-medium
                                                  rounded-lg text-sm px-5 py-2.5 ml-2
-                                                 focus:outline-none border border-[#669BBC]">Sign in</button>
+                                                 focus:outline-none border border-secondary">Sign in</button>
         </div>
         <div className="m-auto mr-1 md:hidden">
 
@@ -98,10 +98,10 @@ export default function Navbar() {
       {visible &&
         <ul className="font-medium flex flex-col p-4 border border-gray-100 rounded-lg bg-gray-50 mt-0 md:hidden">
           <li>
-            <a href="#" className="block py-2 pl-3 pr-4 text-gray-900 rounded  md:hover:bg-[#669BBC]" aria-current="page">Submit a request</a>
+            <a href="#" className="block py-2 pl-3 pr-4 text-gray-900 rounded  md:hover:bg-secondary" aria-current="page">Submit a request</a>
           </li>
           <li>
-            <a href="#" className="block py-2 pl-3 pr-4 text-gray-900 rounded  md:hover:bg-[#669BBC]">Sign in</a>
+            <a href="#" className="block py-2 pl-3 pr-4 text-gray-900 rounded  md:hover:bg-secondary">Sign in</a>
           </li>
         </ul>}</div>)
 
