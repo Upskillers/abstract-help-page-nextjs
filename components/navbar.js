@@ -81,7 +81,7 @@ export default function Navbar() {
                                                  rounded-lg text-sm px-5 py-2.5 ml-2
                                                  focus:outline-none border border-secondary">Sign in</button>
         </div>
-        <div className="m-auto mr-1 md:hidden">
+        <div className="m-auto ml-1 mr-1 md:hidden">
 
           <button onClick={handleToggle} data-collapse-toggle="navbar-default" type="button" className="inline-flex items-center
                                                                                                               p-2 w-10 h-10 justify-center
