@@ -6,7 +6,7 @@ import Layout from '../components/layout';
 export default function Home({ allArticlesData }) {
   return (
     <Layout home>
-      <h1 className="mb-[1.5rem] leading-[1.15rem] text-[3.6rem] text-center">
+      <h1 className="mb-[1.5rem] leading-[1.15rem] text-[3.6rem] text-center dark:text-white">
         Welcome to&nbsp;
         <a
           href="https://nextjs.org"
@@ -14,7 +14,7 @@ export default function Home({ allArticlesData }) {
         >Next.js!</a>
       </h1>
 
-      <p className="align-center leading-6 text-base mt-2">
+      <p className="align-center text-white leading-6 text-base mt-2">
         Get started by editing <code>pages/index.js</code>
       </p>
 
@@ -51,7 +51,7 @@ export default function Home({ allArticlesData }) {
               className="text-accent hover:underline focus:underline active:underline"
               >{title}</Link>
             <br />
-            <small>
+            <small className='text-white'>
               <Date dateString={date} />
             </small>
           </li>
