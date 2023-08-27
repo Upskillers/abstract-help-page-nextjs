@@ -15,7 +15,7 @@ export default function Layout({ children, home }) {
         <meta name="og:title" content={siteTitle} />
       </Head>
       <Navbar />
-      <main className='py-[5rem] flex grow flex-col flex-wrap items-center justify-center dark:bg-black'>
+      <main className='py-[5rem] flex grow flex-col flex-wrap items-center justify-center'>
         {children}
       </main>
       {!home && (
