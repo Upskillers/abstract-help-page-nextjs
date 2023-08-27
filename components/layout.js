@@ -2,7 +2,6 @@ import Head from 'next/head'
 import Link from 'next/link'
 import Navbar from './navbar'
 import Footer from './footer'
-import Script from 'next/script'
 
 export const siteTitle = 'Upskill: Abstract Help Center'
 

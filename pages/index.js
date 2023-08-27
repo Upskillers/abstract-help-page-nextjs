@@ -2,7 +2,7 @@ import Link from 'next/link';
 import { getSortedArticlesData } from '../lib/articles';
 import Card from '../components/card';
 import Layout from '../components/layout';
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import Search from '../components/search';
 
 export default function Home({ allArticlesData }) {
