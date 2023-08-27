@@ -16,18 +16,13 @@ export default function Home({ allArticlesData }) {
   }
   return (
     <Layout home>
-        <Search onFocusHandler={(status) => checkSearchStatus(status)} />
-      <h1 className="mb-[1.5rem] leading-[1.15rem] text-[3.6rem] text-center">
-        Welcome to&nbsp;
-        <a
-          href="https://nextjs.org"
-          className="text-accent hover:underline focus:underline active:underline"
-        >Next.js!</a>
-      </h1>
+      <div className='bg-primary-100 w-full p-[8em]'> 
+          <div className='w-max m-auto'>
+          <h1 className='text-[70px] my-5 mx-20'>How can we help?</h1>
+          <Search onFocusHandler={(status) => checkSearchStatus(status)} />
 
-      <p className="align-center leading-6 text-base mt-2">
-        Get started by editing <code>pages/index.js</code>
-      </p>
+          </div>
+      </div>
 
       <div className="flex items-center justify-center flex-wrap max-w-[800px] mt-12">
         <Card
