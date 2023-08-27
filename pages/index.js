@@ -2,10 +2,21 @@ import Link from 'next/link';
 import { getSortedArticlesData } from '../lib/articles';
 import Card from '../components/card';
 import Layout from '../components/layout';
+import { useState, useEffect } from 'react';
+import Search from '../components/search';
 
 export default function Home({ allArticlesData }) {
+  const [searchActive, setSearchActive] = useState(false)
+  const checkSearchStatus = (status) => {
+    if (status) {
+      setSearchActive(true)
+    } else {
+      setSearchActive(false)
+    }
+  }
   return (
     <Layout home>
+        <Search onFocusHandler={(status) => checkSearchStatus(status)} />
       <h1 className="mb-[1.5rem] leading-[1.15rem] text-[3.6rem] text-center">
         Welcome to&nbsp;
         <a
