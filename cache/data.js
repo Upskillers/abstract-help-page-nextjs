@@ -1,0 +1,1 @@
+export const posts = [{"id":"initial","title":"This is my initial post"},{"id":"initial2copy","title":"This is my initial post2"}]
