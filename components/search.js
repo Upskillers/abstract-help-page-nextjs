@@ -5,7 +5,7 @@ export default function Search() {
   const searchRef = useRef(null)
   const [query, setQuery] = useState('')
   const [active, setActive] = useState(false)
-  const [results, setResults] = useState([])
+  const [results, setResults] = useState(null)
 
   const searchEndpoint = (query) => `/api/search?q=${query}`
 
@@ -54,7 +54,7 @@ export default function Search() {
         value={query}
       />
       <ul className="overflow-hidden absolute w-full bg-white">
-        {active && results.length > 0 && (
+        {active && results != null && results.length > 0 && (
           <div>
             {results.map(({ id, title }) => (
               <li className="p-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white" key={id}>
@@ -65,9 +65,14 @@ export default function Search() {
             ))}
           </div>
         )}
-        {active && results.length == 0 && query.length > 0 && (
+        {active && results != null && results.length == 0 && query.length > 0 && (
           <li className="p-4">
             <p>No results found</p>
+          </li>
+        )}
+        {active && results == null && query.length > 0 && (
+          <li className="p-4">
+            <p>Loading...</p>
           </li>
         )}
       </ul>
