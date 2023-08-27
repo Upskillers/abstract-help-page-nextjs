@@ -4,19 +4,13 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "cache-posts": "node lib/cache.js"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "npm run cache-posts && git add cache/data.js"
-    }
+    "cache-articles": "node lib/cache.js"
   },
   "dependencies": {
     "autoprefixer": "^10.4.14",
     "date-fns": "^2.30.0",
     "fs": "^0.0.1-security",
     "gray-matter": "^4.0.3",
-    "husky": "^8.0.3",
     "next": "^13.4.12",
     "path": "^0.12.7",
     "postcss": "^8.4.27",
