@@ -1,7 +1,7 @@
 ---
-title: 'This is my initial post'
+title: 'This is my initial post3'
 date: '2022-01-01'
-labels: ['abc']
+labels: ['alfie']
 
 ---
 
