@@ -12,11 +12,11 @@ export default async function Article({ params }) {
         <title>{articlesData.title}</title>
       </Head>
       <article>
-        <h1 >{articlesData.title}</h1>
+        <h1 className='text-black dark:text-white'>{articlesData.title}</h1>
         <div>
-          <p >{articlesData.date} </p>
+          <p className='text-black dark:text-white'>{articlesData.date} </p>
         </div>
-        <div dangerouslySetInnerHTML={{__html: articlesData.contentHtml}}/>
+        <div className='text-black dark:text-white' dangerouslySetInnerHTML={{__html: articlesData.contentHtml}}/>
       </article>
       </div>
   )

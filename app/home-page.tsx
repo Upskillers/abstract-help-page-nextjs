@@ -17,16 +17,16 @@ export default function HomePage({ allArticlesData }) {
     }
   }
   return (
-    <div>
-      <div className='bg-primary-100 w-full p-[8em]'> 
+    <div className='w-full flex flex-col mt-0'>
+      <div className='bg-primary-100 dark:bg-primary-950 shadow-lg mt-0 w-full h-full p-[8em] pt-0'> 
           <div className='w-max m-auto'>
-          <h1 className='text-[70px] my-5 mx-20'>How can we help2?</h1>
+          <h1 className='text-[70px] text-white my-20 mx-20'>How can we help?</h1>
           <Search onFocusHandler={(status) => checkSearchStatus(status)} />
 
           </div>
       </div>
 
-      <div className="flex items-center justify-center flex-wrap max-w-[800px] mt-12">
+      <div className="flex items-center justify-center flex-wrap max-w-[800px] my-[4em] m-auto">
         {allArticlesData.map(({ id, date, title }) => (
             <Card 
               link={`/articles/${id}`}
