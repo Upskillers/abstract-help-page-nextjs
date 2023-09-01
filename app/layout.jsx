@@ -32,7 +32,7 @@ export default function RootLayout({children}) {
       <div className='min-h-[100vh] px-0 py-0 flex flex-col justify-center items-center'>
 
         <Navbar />
-        <main className='pb-[5rem] flex grow flex-col flex-wrap items-center justify-center w-full dark:bg-black'>
+        <main className='py-[5rem] w-full flex grow flex-col flex-wrap items-center justify-center dark:bg-primary-950'>
           {children}
         </main>
         <Footer />

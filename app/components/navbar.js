@@ -46,8 +46,8 @@ export default function Navbar() {
 
 
   return (
-    <div className="w-full">
-      <div className="w-full bg-primary m-0 flex flex-row justify-between">
+    <div className="w-full dark:shadow-lg dark:drop-shadow-md	">
+      <div className="w-full bg-primary m-0 flex flex-row justify-between ">
         <div id="logo-wrapper" className="pr-2 m-1 md:ml-4 w-auto h-16 flex p-4">
           <svg className="abstract-logo logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 51" preserveAspectRatio="xMinYMid slice">
             <g className="abstract-logo-mark" fill="#fff">
