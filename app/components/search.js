@@ -1,7 +1,7 @@
 import { useCallback, useRef, useState } from 'react'
 import Link from 'next/link'
 
-export default function Search() {
+export default function Search({onFocusHandler}) {
   const searchRef = useRef(null)
   const [query, setQuery] = useState('')
   const [active, setActive] = useState(false)

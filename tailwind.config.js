@@ -57,7 +57,9 @@ module.exports = {
   },
   plugins: [],
   content: [
+    "./app/**/*.{js,ts,jsx,tsx,mdx}",
     './pages/**/*.{html,js}',
     './components/**/*.{html,js}',
+
   ],
 };
