@@ -3,7 +3,6 @@
 import Link from 'next/link';
 import { getSortedArticlesData } from '../lib/articles';
 import Card from './components/card';
-import Layout from './components/layout';
 import { useState } from 'react';
 import Search from './components/search';
 import React from 'react';
