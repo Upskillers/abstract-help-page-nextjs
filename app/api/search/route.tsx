@@ -6,7 +6,7 @@ const posts =
     ? require('../../../cache/data').posts
     : getSortedArticlesData()
 
-export async function GET(request: NextResponse) {
+export async function GET(request: Response) {
   const {searchParams} = new URL(request.url);
   const searchQuery = searchParams.get("q");
   console.log(searchQuery)
