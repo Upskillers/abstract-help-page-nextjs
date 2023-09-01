@@ -27,44 +27,14 @@ export default function HomePage({ allArticlesData }) {
       </div>
 
       <div className="flex items-center justify-center flex-wrap max-w-[800px] mt-12">
-        <Card
-          link="https://nextjs.org/docs"
-          heading="Documentation &rarr;"
-          description="Find in-depth information about Next.js features and API."
-        />
-
-        <Card
-          link="https://nextjs.org/learn"
-          heading="Learn &rarr;"
-          description="Learn about Next.js in an interactive course with quizzes!"
-        />
-
-        <Card
-          link="https://github.com/vercel/next.js/tree/master/examples"
-          heading="Examples &rarr;"
-          description="Discover and deploy boilerplate example Next.js projects."
-        />
-
-        <Card
-          link="https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          heading="Deploy &rarr;"
-          description="Instantly deploy your Next.js site to a public URL with Vercel."
-        />
-      </div>
-      <ul>
         {allArticlesData.map(({ id, date, title }) => (
-          <li key={id}>
-            <Link 
-              href={`/articles/${id}`}
-              className="text-accent hover:underline focus:underline active:underline"
-              >{title}</Link>
-            <br />
-            <small>
-              {date}
-            </small>
-          </li>
+            <Card 
+              link={`/articles/${id}`}
+              heading={title}
+              description={date}
+              />
         ))}
-      </ul>
+        </div>
     </div>
   )
 }
