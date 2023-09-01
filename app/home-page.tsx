@@ -61,7 +61,7 @@ export default function HomePage({ allArticlesData }) {
               >{title}</Link>
             <br />
             <small>
-              <Date dateString={date} />
+              {date}
             </small>
           </li>
         ))}
