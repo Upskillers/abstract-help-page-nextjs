@@ -1,4 +1,6 @@
+'use client'
 import { useState, useEffect } from 'react';
+import Link from 'next/link';
 
 export default function Navbar() {
   const [visible, setVisible] = useState(false);
@@ -44,8 +46,8 @@ export default function Navbar() {
 
 
   return (
-    <div className="w-full">
-      <div className="w-full bg-primary m-0 flex flex-row justify-between">
+    <div className="w-full dark:shadow-lg dark:drop-shadow-md	">
+      <div className="w-full bg-primary m-0 flex flex-row justify-between ">
         <div id="logo-wrapper" className="pr-2 m-1 md:ml-4 w-auto h-16 flex p-4">
           <svg className="abstract-logo logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 51" preserveAspectRatio="xMinYMid slice">
             <g className="abstract-logo-mark" fill="#fff">
@@ -64,7 +66,7 @@ export default function Navbar() {
             </g>
           </svg>
           <div className="inline-block w-0.5 self-stretch my-0.5 mx-2 bg-accent"></div>
-          <a className="text-white m-auto ml-0" title="Home" href="#">Help Center</a>
+          <Link className="text-white m-auto ml-0" title="Home" href="../../">Help Center</Link>
         </div>
         <button onClick={handleDarkToggle} className="m-auto mr-4 align-middle">
           <svg id="theme-toggle-dark-icon" className="dark:hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
