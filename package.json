@@ -4,10 +4,11 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "cache-articles": "node lib/cache.js"
+    "cache-articles": "bun lib/cacheBun.js"
   },
   "dependencies": {
     "autoprefixer": "^10.4.14",
+    "bun": "^1.0.1",
     "date-fns": "^2.30.0",
     "fs": "^0.0.1-security",
     "gray-matter": "^4.0.3",

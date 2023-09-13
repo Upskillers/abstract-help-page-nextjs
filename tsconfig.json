@@ -21,14 +21,16 @@
         "name": "next"
       }
     ],
-    "strictNullChecks": true
+    "strictNullChecks": true,
+    "forceConsistentCasingInFileNames": true
   },
   "include": [
     "next-env.d.ts",
     ".next/types/**/*.ts",
     "**/*.ts",
-    "**/*.tsx"
-, "app/api/search/route.jsx"  ],
+    "**/*.tsx",
+    "app/api/search/route.jsx"
+  ],
   "exclude": [
     "node_modules"
   ]
