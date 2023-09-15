@@ -28,6 +28,7 @@ export default function RootLayout({children}) {
     <html lang="en">
     <Head>
       </Head>
+      <script src='theme.js'/>
       <body>
       <div className='min-h-[100vh] px-0 py-0 flex flex-col justify-center items-center'>
 
